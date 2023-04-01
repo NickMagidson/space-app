@@ -1,0 +1,488 @@
+@font-face {
+    font-family: Voyager Light;
+    src: url(./voyager/Webfonts/Voyager\ Light\ Webfont.woff);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Voyager Light';
+    background-color: rgb(199, 199, 199);
+}
+
+
+/* HEADER */
+.header {
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 5px 25px black;
+    border: none;
+    background-color: rgb(17, 17, 17);
+    z-index: 2;
+    position: relative;
+}
+
+.title {
+    z-index: 3;
+    padding-right: 140px;
+    margin: auto;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Voyager Light';
+    font-size: 1em;
+    text-align: left;
+}
+
+/* MAIN CONTENT */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    width: 100%;
+    max-height: 100%;
+    background-color: rgb(199, 199, 199);
+}
+
+#video {
+    z-index: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(65%);
+}
+
+
+
+/* PHOTO CONTENT */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: auto;
+    z-index: 1;
+    filter: drop-shadow(2px 2px 10px #000000)   ;
+    padding: 40px;
+}
+
+.photo {
+    z-index: 1;
+    align-items: flex-start;
+    max-height: 180px;
+    border: 3px solid black;
+}
+
+/* INFO CONTENT */
+.info-container {
+    z-index: 1;
+    max-width: 750px;
+    /* margin-left: 10px;
+    margin-bottom: auto;
+    margin-top: 40px; */
+    margin: auto;
+    color: aliceblue;
+}
+
+.info-title {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.date {
+    margin-bottom: 60px;
+    margin-left: 10px;
+}
+
+.description {
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: .9px;
+    padding-right: 10px;
+    margin-left: 10px;
+
+    background-color: rgba(5, 4, 4, 0.377);
+    /* backdrop-filter: blur(5px); */
+    filter: drop-shadow(8px 10px 4px #000000)
+}
+
+.date-picker {
+    display: none;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Small Tablet Styles */
+@media screen and (min-width: 620px) {
+
+    .title {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: .9em;
+        height: 50px;
+        margin-left: 30px;
+        padding-right: 10px;
+        letter-spacing: 4px;
+        line-height: 20px;
+        /* width: 40%; */
+    }
+
+    .photo {
+        max-height: 250px;
+    }
+
+    .info-container {
+        z-index: 1;
+        margin: auto;
+        padding: 27px;
+    }
+
+    .description {
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    #video {
+        z-index: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        filter: brightness(65%);
+    }
+    
+}
+
+/* Large Tablet & Laptops */
+@media screen and (min-width: 960px) {
+
+    .main {
+        justify-content: center;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 1.2em;
+        height: 50px;
+        margin-left: 40px;
+        width: 55%;
+        line-height: 1.3rem;
+        padding-right: 285px;
+    }
+
+    .photo-container {
+        margin-top: 90px;
+    }
+
+    .photo {
+        max-height: 340px;
+    }
+
+    .info-container {
+        z-index: 1;
+        margin: auto;
+        max-width: 100%;
+        padding: 45px;
+    }
+
+    .info-title {
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+        font-size: 2.1em;
+    }
+
+    .date {
+        font-size: 1.4em;
+    }
+
+    .description {
+        max-width: 100%;
+        justify-content: center;
+        padding-right: 10%;
+        font-size: 1em;
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    #video {
+        z-index: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        filter: brightness(65%);
+    }
+
+    .react-datepicker-wrapper {
+        width: 10%;
+        margin-right: 200px;
+    }
+
+    .date-picker {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .datepicker-title {
+        color: aliceblue;
+    }
+
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
+
+    .title {
+        width: 25%;
+        line-height: 1.5rem;
+        margin-left: 50px;
+    }
+
+    .info-container {
+        z-index: 1;
+        padding: 56px;
+        margin: auto;
+    }
+
+    .info-title {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .date {
+        margin-bottom: 30px;
+    }
+
+    .description {
+        font-size: 1.1em;
+        line-height: 1.5;
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    #video {
+        z-index: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        filter: brightness(65%);
+    }
+
+    .react-datepicker-wrapper {
+        width: 10%;
+        margin-right: 200px;
+    }
+
+    .date-picker {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title {
+        font-size: 1.3em;
+        width: 80%;
+        margin-left: 60px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1%;
+    }
+
+    .photo-container {
+        border: #000000 1px solid; /* Border may be temporary */
+        margin-top: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* BG Video hidden temporarily */
+    #video {
+        z-index: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        filter: brightness(55%);
+    }
+
+    .photo-container {
+        padding: none;
+        border: none;
+        margin-left: 6%;
+    }
+
+    .photo {
+        max-height: 350px;
+    }
+    
+    .info-container {
+        z-index: 1;
+        padding: none;
+        margin-top: 80px;
+        margin-right: auto;
+    }
+
+    .info-title {
+        font-size: 2.4em;
+        z-index: 2;
+        text-align: left;
+        padding-right: auto;
+        padding-left: 0;
+    }
+
+    .date {
+        font-size: 1em;
+    }
+
+    .description {
+        z-index: 2;
+        padding-right: 10%;;
+        line-height: 1.5;
+        font-size: 1.1em;
+        letter-spacing: 1.3px;
+
+        background-color: rgba(5, 4, 4, 0.377);
+        backdrop-filter: blur(5px);
+        filter: drop-shadow(8px 10px 4px #000000)
+    }
+
+    .react-datepicker-wrapper {
+        width: 10%;
+        margin-right: 200px;
+    }
+
+    .date-picker {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 5;
+    }
+
+
+}   
+
+@media screen and (min-width: 1920px) {
+
+    .title {
+        font-size: 1.1em;
+        width: 28%;
+        margin-left: 70px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1%;
+    }
+
+    .photo-container {
+        border: #000000 1px solid; /* Border may be temporary */
+        margin-top: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* BG Video hidden temporarily */
+    #video {
+        z-index: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        filter: brightness(55%);
+    }
+
+    .photo-container {
+        padding: none;
+        border: none;
+        margin-left: 10%;
+    }
+
+    .photo {
+        max-height: 350px;
+    }
+    
+    .info-container {
+        z-index: 1;
+        padding: none;
+        margin-top: 80px;
+        margin-right: auto;
+        margin-left: 10%;
+    }
+
+    .info-title {
+        font-size: 2.8em;
+        z-index: 2;
+        text-align: left;
+        padding-right: auto;
+        padding-left: 0;
+    }
+
+    .date {
+        font-size: 1em;
+    }
+
+    .description {
+        z-index: 2;
+        padding-right: 10%;
+        margin-right: 15%;
+        line-height: 1.5;
+        font-size: 1em;
+
+        background-color: rgba(5, 4, 4, 0.377);
+        backdrop-filter: blur(5px);
+        filter: drop-shadow(8px 10px 4px #000000)
+    }
+
+    .react-datepicker-wrapper {
+        width: 10%;
+        margin-right: 200px;
+        z-index: 5;
+    }
+
+    .date-picker {
+        display: flex;
+        margin-left: auto;
+    }
+
+}   
